@@ -1,0 +1,14 @@
+C:\Users\arkha\source\repos\ModBus1\ModBus1\obj\Debug\ModBus1.csproj.AssemblyReference.cache
+C:\Users\arkha\source\repos\ModBus1\ModBus1\obj\Debug\ModBus1.csproj.SuggestedBindingRedirects.cache
+C:\Users\arkha\source\repos\ModBus1\ModBus1\obj\Debug\ModBus1.Form1.resources
+C:\Users\arkha\source\repos\ModBus1\ModBus1\obj\Debug\ModBus1.Properties.Resources.resources
+C:\Users\arkha\source\repos\ModBus1\ModBus1\obj\Debug\ModBus1.csproj.GenerateResource.cache
+C:\Users\arkha\source\repos\ModBus1\ModBus1\obj\Debug\ModBus1.csproj.CoreCompileInputs.cache
+C:\Users\arkha\source\repos\ModBus1\ModBus1\bin\Debug\ModBus1.exe.config
+C:\Users\arkha\source\repos\ModBus1\ModBus1\bin\Debug\ModBus1.exe
+C:\Users\arkha\source\repos\ModBus1\ModBus1\bin\Debug\ModBus1.pdb
+C:\Users\arkha\source\repos\ModBus1\ModBus1\obj\Debug\ModBus1.exe
+C:\Users\arkha\source\repos\ModBus1\ModBus1\obj\Debug\ModBus1.pdb
+C:\Users\arkha\source\repos\ModBus1\ModBus1\bin\Debug\NModbus4.dll
+C:\Users\arkha\source\repos\ModBus1\ModBus1\bin\Debug\NModbus4.xml
+C:\Users\arkha\source\repos\ModBus1\ModBus1\obj\Debug\ModBus1.csproj.CopyComplete
