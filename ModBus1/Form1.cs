@@ -19,8 +19,8 @@ namespace ModBus1
             InitializeComponent();
         }
 
-        
 
+        string temp = "";
         private void buttonUpdatePorts_Click(object sender, EventArgs e)
         {
             string[] ports = SerialPort.GetPortNames();
@@ -43,9 +43,12 @@ namespace ModBus1
                 try
                 {
                     MySerialPort.PortName = comboBoxPorts.Text; //выбираем порт
+                    
                     MySerialPort.Open();                        // открываем порт
                     comboBoxPorts.Enabled = false;
+                    timer1.Enabled = true;
                     buttonConect.Text = "Отключиться";
+
                 }
                 catch
                 {
@@ -56,6 +59,7 @@ namespace ModBus1
             {
                 MySerialPort.Close();
                 comboBoxPorts.Enabled =true;
+                timer1.Enabled = false;
                 buttonConect.Text = "Подключиться";
 
             }
@@ -87,6 +91,65 @@ namespace ModBus1
             //label1.Text = holding_register.ToString();
             ////MessageBox.Show(label1.Text);
             //serialPort.Close();
+
+
+
+
+            //temp += MySerialPort.ReadExisting().ToString() + "\n";
+
+            int buferSize = MySerialPort.BytesToRead;
+            temp += "adress: "+ MySerialPort.ReadByte().ToString()+ " ";
+            temp += "Comand: "+ MySerialPort.ReadByte().ToString()+ "   ";
+
+            for (int i = 0; i < buferSize - 4; ++i)
+            {
+                temp += MySerialPort.ReadByte().ToString()+" ";
+
+            }
+            
+            
+            temp += "   CRCL"+MySerialPort.ReadByte().ToString();
+            temp += "   CRCH"+MySerialPort.ReadByte().ToString();
+
+
+            temp += "\n";
+
+
+
+            //ModbusSerialMaster master = ModbusSerialMaster.CreateRtu(MySerialPort);
+            //byte slaveID = 1;
+            //ushort startAddress = 0;
+            //ushort numOfPoints = 1;
+            //ushort[] holding_register = master.ReadHoldingRegisters(slaveID, startAddress,
+            //numOfPoints);
+            //label1.Text = holding_register.ToString();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (temp != "")
+            {
+                label1.Text = temp; 
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //ushort[] vals;
+            //byte slaveID = 1;
+            //ushort startAddress = 0;
+            //ushort numOfPoints = 1;
+            //ModbusSerialMaster master = ModbusSerialMaster.CreateRtu(MySerialPort);
+            //try
+            //{
+            //    vals = master.ReadHoldingRegisters(slaveID, startAddress, numOfPoints);
+
+            //    temp = vals[0].ToString();
+            //}
+            //catch
+            //{
+            //    return;
+            //}
         }
     }
 }
